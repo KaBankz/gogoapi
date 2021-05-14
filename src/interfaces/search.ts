@@ -1,8 +1,8 @@
 interface Search {
-  title?: string | null;
-  cover?: string | null;
-  year?: number | null;
-  slug?: string | null;
+  title?: string;
+  cover?: string;
+  year?: number;
+  slug?: string;
 }
 
 export default Search;

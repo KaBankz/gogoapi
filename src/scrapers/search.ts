@@ -20,10 +20,10 @@ async function scrape(query: string, page: number = 1) {
       .attr('href')
       ?.replace(/^(?:\/category\/)/im, '');
     scrappedData.push({
-      title: title || null,
-      cover: cover || null,
-      year: year || null,
-      slug: slug || null,
+      title: title,
+      cover: cover,
+      year: year,
+      slug: slug,
     });
   });
   return scrappedData;
