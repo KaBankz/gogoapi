@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-import { notFound, errorHandler } from './middleware';
+import { notFound, errorHandler, invalidMethod } from './middleware';
 import controllers from './controllers';
 
 const app = express();
@@ -16,10 +16,11 @@ app.use(helmet({ crossOriginResourcePolicy: true }));
 app.use(cors());
 app.use(json());
 
-app.use(controllers);
-
+app.use(invalidMethod);
 app.use(notFound);
 app.use(errorHandler);
+
+app.use(controllers);
 
 const port = process.env.PORT || 5000;
 
