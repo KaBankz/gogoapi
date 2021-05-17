@@ -1,22 +1,17 @@
 import { Router } from 'express';
-import { search } from '../../scrapers';
+import { Paths, Queries } from '../../interfaces';
+import { common } from '../../scrapers';
 
 const router = Router();
 
-interface queries {
-  query: string;
-  page: number;
-}
-
 router.get('/', async (req, res, next) => {
   try {
-    const obj: any = req.query;
-    const { query, page }: queries = obj;
-    if (!query) next(new Error('Missing Search Query'));
-    const data = await search(query, page);
-    const status = data.length ? 200 : 404;
+    const { query, page }: Queries = req.query;
+    const data = await common(Paths.Search, page, query);
+    const override = data.map(({ episode, ...keep }) => keep);
+    const status = override.length ? 200 : 404;
     res.status(status).json({
-      data: data.length ? data : null,
+      data: override,
       status,
     });
   } catch (error) {
