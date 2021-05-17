@@ -3,10 +3,11 @@ import { URLSearchParams } from 'url';
 import { gogoClient } from '../helpers';
 import { Common, Paths } from '../interfaces';
 
-async function scrape(path: Paths, page: number = 1, query: string = '') {
+async function scrape(path: Paths, page: number = 1, query: string = '', index: string | number = '') {
   const queries = new URLSearchParams({
     page: page.toString(),
     keyword: query,
+    aph: index.toString(),
   }).toString();
 
   const { data } = await gogoClient.get(`${path}?${queries}`);
