@@ -1,9 +1,9 @@
 interface Common {
-  title: string | null;
-  cover: string | null;
+  title: string;
+  cover: string;
   year: number | null;
   episode: number | null;
-  slug: string | null;
+  slug: string;
 }
 
 export default Common;

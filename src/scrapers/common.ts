@@ -34,11 +34,11 @@ async function scrape(path: Paths, page: number = 1, query: string = '', index: 
       ?.replace(/^(?:\/category\/)|^(?:\/)|(?:-episode-\d+)$/gim, '');
 
     scrappedData.push({
-      title: title || null,
-      cover: cover || null,
+      title: title,
+      cover: cover || '',
       year: year || null,
       episode: episode || null,
-      slug: slug || null,
+      slug: slug || '',
     });
   });
 
