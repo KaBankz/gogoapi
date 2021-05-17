@@ -1,20 +1,17 @@
 import { Router } from 'express';
-import { recent } from '../../scrapers';
+import { Paths, Queries } from '../../interfaces';
+import { common } from '../../scrapers';
 
 const router = Router();
 
-interface queries {
-  page: number;
-}
-
 router.get('/', async (req, res, next) => {
   try {
-    const obj: any = req.query;
-    const { page }: queries = obj;
-    const data = await recent(page);
-    const status = data.length ? 200 : 404;
+    const { page }: Queries = req.query;
+    const data = await common(Paths.Recents, page);
+    const override = data.map(({ year, ...keep }) => keep);
+    const status = override.length ? 200 : 404;
     res.status(status).json({
-      data: data.length ? data : null,
+      data: override,
       status,
     });
   } catch (error) {
