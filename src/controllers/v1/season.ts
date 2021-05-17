@@ -7,7 +7,7 @@ const router = Router();
 router.get('/', async (req, res, next) => {
   try {
     const { page }: Queries = req.query;
-    const data = await common(Paths.Search, page);
+    const data = await common(Paths.CurrentSeason, page);
     const override = data.map(({ episode, ...keep }) => keep);
     const status = override.length ? 200 : 404;
     res.status(status).json({
