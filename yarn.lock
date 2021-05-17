@@ -61,9 +61,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@^15.0.3":
-  version "15.0.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.3.tgz#ee09fcaac513576474c327da5818d421b98db88a"
-  integrity sha512-/WbxFeBU+0F79z9RdEOXH4CsDga+ibi5M8uEYr91u3CkT/pdWcV8MCook+4wDPnZBexRdwWS+PiVZ2xJviAzcQ==
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.3.0.tgz#d6fed7d6bc6854306da3dea1af9f874b00783e26"
+  integrity sha512-8/bnjSZD86ZfpBsDlCIkNXIvm+h6wi9g7IqL+kmFkQ+Wvu3JrasgLElfiPgoo8V8vVfnEi0QVS12gbl94h9YsQ==
 
 "@types/qs@*":
   version "6.9.6"
@@ -365,12 +365,12 @@ docopt@~0.6.2:
   integrity sha1-so6eIiDaXsSffqW7JKR3h0Be6xE=
 
 dom-serializer@^1.0.1, dom-serializer@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-1.3.1.tgz#d845a1565d7c041a95e5dab62184ab41e3a519be"
-  integrity sha512-Pv2ZluG5ife96udGgEDovOOOA5UELkltfJpnIExPrAk1LTvecolUGn6lIaoLh86d83GiB86CjzciMd9BuRB71Q==
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-1.3.2.tgz#6206437d32ceefaec7161803230c7a20bc1b4d91"
+  integrity sha512-5c54Bk5Dw4qAxNOI1pFEizPSjVsx5+bpJKmL2kPn8JhBUq2q09tTCa3mjijun2NfK78NMouDYNMBkOrPZiS+ig==
   dependencies:
     domelementtype "^2.0.1"
-    domhandler "^4.0.0"
+    domhandler "^4.2.0"
     entities "^2.0.0"
 
 domelementtype@^2.0.1, domelementtype@^2.2.0:
@@ -1251,9 +1251,9 @@ unpipe@1.0.0, unpipe@~1.0.0:
   integrity sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
 
 user-agents@^1.0.651:
-  version "1.0.651"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.651.tgz#b891dfa699c30a10c097dae4e64902fd53f15463"
-  integrity sha512-bHTXW+Sa0h6CPO09tRcZ89X7hbB8tqtqXFJlm3u6i+AvgHwIaFO4WmKdweUSZSZ4JdVewssg7Ts6jxPNoyI0qQ==
+  version "1.0.655"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.655.tgz#b7ac95c6fb223f67cfcca591038b8eae25b79fa6"
+  integrity sha512-zzZISrLyV/mtidTOOx4SU6+8JZKrXMpMn0+Kzb4QWNPefQYVuuUHr2g+nHWRwGPiT0Z1z+s4CpiN3sSWSdg9RA==
   dependencies:
     dot-json "^1.2.2"
     lodash.clonedeep "^4.5.0"
