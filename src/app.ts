@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-import { notFound, errorHandler, invalidMethod } from './middleware';
+import { notFound, errorHandler, invalidMethod, queryValidator } from './middleware';
 import controllers from './controllers';
 
 const app = express();
@@ -17,10 +17,12 @@ app.use(cors());
 app.use(json());
 
 app.use(invalidMethod);
-app.use(notFound);
-app.use(errorHandler);
+app.use(queryValidator);
 
 app.use(controllers);
+
+app.use(notFound);
+app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
 
