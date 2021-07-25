@@ -1,3 +1,4 @@
 import common from './common';
+import allSeasons from './allSeasons';
 
-export { common };
+export { common, allSeasons };
