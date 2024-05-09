@@ -13,7 +13,7 @@
   "private": "true",
   "author": "KaBankz",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "cheerio": "^1.0.0-rc.9",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
