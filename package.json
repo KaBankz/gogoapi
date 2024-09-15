@@ -17,7 +17,7 @@
     "cheerio": "^1.0.0-rc.9",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
-    "express": "^4.17.1",
+    "express": "^4.20.0",
     "helmet": "^4.4.1",
     "morgan": "^1.10.0",
     "user-agents": "^1.0.651"
